@@ -1390,7 +1390,6 @@ RESPONSIVE — MOBILE (<900px) — 50/50 vertical
     }
   </script>
 
-  
   <!-- ===== DYNAMIC PROFILE VARIANTS (ref= parameter) ===== -->
   <script>
   (function() {
@@ -1399,229 +1398,556 @@ RESPONSIVE — MOBILE (<900px) — 50/50 vertical
     var validRefs = ["pm","com","dev","cre","bus","adm","coo"];
     if (!ref || validRefs.indexOf(ref) === -1) return;
 
+    // --- Profils: titre, hero, about, projets, descriptions ---
     var profiles = {
-
-      pm: {
-        title: "Junior Kabwe \u2014 Project Manager",
-        heroText: "A Montr\u00e9al-based project manager with a track record in coordinating cross-functional teams, delivering multi-stakeholder initiatives, and driving projects from strategy through execution across private, institutional, and startup environments.",
-        secondaryTexts: [
-          "I operate at the intersection of project delivery, digital operations, and stakeholder alignment. My work spans end-to-end project coordination, resource planning, and performance tracking for clients and teams across technology, gaming, social economy, and international markets.",
-          "My approach combines structured planning with adaptive execution: I think about deliverables, dependencies, and stakeholder needs before I think about tools. Whether managing a product launch timeline, coordinating deliverables across distributed teams, or aligning internal and external partners around shared milestones, I focus on what keeps projects moving, on scope, and on time."
-        ],
-        aboutParagraphs: [
-          "I\u2019ve spent the last several years building one consistent skill set through different contexts: knowing how to break complex work into clear plans, coordinate the right people at the right time, and deliver results that meet both the brief and the deadline. That\u2019s what project management actually is.",
-          "Most people rush to action because it feels productive. But the real leverage is in those quiet hours before anything begins \u2014 mapping the terrain, questioning assumptions, searching for the angle nobody else considered.",
-          "That\u2019s where great work is born.",
-          "What I\u2019ve learned is that most project failures are actually alignment failures. Teams don\u2019t struggle to do the work. They struggle to agree on what success looks like, who owns what, and what the real priorities are. I help organizations answer those three questions before anything gets built.",
-          "I\u2019m drawn to environments where the work is genuinely complex: research institutions, technology organizations, social economy structures. Places where scope is hard to define because the subject matter is dense, the stakeholders are diverse, and the margin for error is real.",
-          "French is my second language and also the language in which I do most of my work. Most of my professional writing, consulting, and client communication has been conducted in French, English or Swahili.",
-          "I want to build, to solve, to create \u2014 with people who bring the same rigor and care to their work."
-        ],
-        projectOrder: ["lgs","playver","vers-demain","scion-myra","gamintribe","lono-inc","notion","krispy-kreme","northwind"],
-        videoCaptions: {
-          "vers-demain": "Vers Demain (2025) \u2014 Strategic Project Delivery",
-          "scion-myra": "Scion Myra (2021) \u2014 Multi-Account Project Management",
-          "playver": "Playver (2026) \u2014 Pre-Launch Coordination",
-          "gamintribe": "GaminTribe (2025) \u2014 Brand Identity Delivery",
-          "lono-inc": "Lono Inc. (2023) \u2014 Advisory Engagement Management",
-          "lgs": "LGS (2024) \u2014 Cross-Functional Team Management",
-          "notion": "Notion \u2014 Academic (2022) \u2014 Automation Pipeline Design",
-          "krispy-kreme": "Krispy Kreme \u2014 Academic (2025) \u2014 Research Project Lead",
-          "northwind": "Northwind \u2014 Academic (2024) \u2014 BI Project Delivery"
-        }
+      "pm": {
+            "title": "Junior Kabwe — Project Manager",
+            "heroText": "A Montréal-based project manager with a track record in coordinating cross-functional teams, delivering multi-stakeholder initiatives, and driving projects from strategy through execution across private, institutional, and startup environments.",
+            "secondaryTexts": [
+                  "I operate at the intersection of project delivery, digital operations, and stakeholder alignment. My work spans end-to-end project coordination, resource planning, and performance tracking for clients and teams across technology, gaming, social economy, and international markets.",
+                  "My approach combines structured planning with adaptive execution: I think about deliverables, dependencies, and stakeholder needs before I think about tools. Whether managing a product launch timeline, coordinating deliverables across distributed teams, or aligning internal and external partners around shared milestones, I focus on what keeps projects moving, on scope, and on time."
+            ],
+            "aboutParagraphs": [
+                  "I’ve spent the last several years building one consistent skill set through different contexts: knowing how to break complex work into clear plans, coordinate the right people at the right time, and deliver results that meet both the brief and the deadline. That’s what project management actually is.",
+                  "Most people rush to action because it feels productive. But the real leverage is in those quiet hours before anything begins — mapping the terrain, questioning assumptions, searching for the angle nobody else considered.",
+                  "That’s where great work is born.",
+                  "What I’ve learned is that most project failures are actually alignment failures. Teams don’t struggle to do the work. They struggle to agree on what success looks like, who owns what, and what the real priorities are. I help organizations answer those three questions before anything gets built.",
+                  "I’m drawn to environments where the work is genuinely complex: research institutions, technology organizations, social economy structures. Places where scope is hard to define because the subject matter is dense, the stakeholders are diverse, and the margin for error is real.",
+                  "French is my second language and also the language in which I do most of my work. Most of my professional writing, consulting, and client communication has been conducted in French, English or Swahili.",
+                  "I want to build, to solve, to create — with people who bring the same rigor and care to their work."
+            ],
+            "projectOrder": [
+                  "lgs",
+                  "playver",
+                  "vers-demain",
+                  "scion-myra",
+                  "gamintribe",
+                  "lono-inc",
+                  "notion",
+                  "krispy-kreme",
+                  "northwind"
+            ],
+            "videoCaptions": {
+                  "vers-demain": "Vers Demain (2025) — Strategic Project Delivery",
+                  "scion-myra": "Scion Myra (2021) — Multi-Account Project Management",
+                  "playver": "Playver (2026) — Pre-Launch Coordination",
+                  "gamintribe": "GaminTribe (2025) — Brand Identity Delivery",
+                  "lono-inc": "Lono Inc. (2023) — Advisory Engagement Management",
+                  "lgs": "LGS (2024) — Cross-Functional Team Management",
+                  "notion": "Notion — Academic (2022) — Automation Pipeline Design",
+                  "krispy-kreme": "Krispy Kreme — Academic (2025) — Research Project Lead",
+                  "northwind": "Northwind — Academic (2024) — BI Project Delivery"
+            },
+            "projectDescriptions": {
+                  "vers-demain": {
+                        "context": "Vers Demain is a nearly century-old organization promoting a social economy rooted in social credit principles. Facing an aging membership base and declining digital engagement, the organization needed a structured initiative to modernize its outreach. The project required coordinating an internal audit, stakeholder interviews, and a phased delivery of strategic recommendations within defined timelines.",
+                        "mandate": "Led the full project lifecycle: scoped the engagement, defined deliverables and milestones, coordinated data gathering across existing channels, managed stakeholder interviews, and delivered a phased implementation roadmap. Every output was tracked against an agreed timeline, with prioritized action items and clear ownership assigned at each stage."
+                  },
+                  "scion-myra": {
+                        "context": "Scion Myra is where I built and stress-tested my project management practice. Founded in Montreal, the studio operated as a full-service advisory operation managing distinct client accounts, content pipelines, and delivery schedules for engagements across tech, gaming, and social economy sectors.",
+                        "mandate": "End-to-end project management for multiple concurrent client accounts: scope definition, editorial calendar planning, milestone tracking, vendor coordination, and executive-level reporting. The studio also served as a proving ground for CRM-driven workflows, freelancer coordination, and repeatable delivery processes."
+                  },
+                  "playver": {
+                        "context": "Playver is a sports tech startup connecting athletes to pickup games, playing partners, and available venues in real time. The project challenge was coordinating a full pre-launch initiative — building community traction before the product existed — while managing a distributed creative team under tight timelines.",
+                        "mandate": "Managed the full pre-launch project lifecycle: defined deliverables, built the production schedule, coordinated a creative team across photography, video, and digital content, and oversaw delivery of all assets against the platform’s growth milestones. Every workstream was scoped, assigned, tracked, and delivered to meet launch-phase objectives."
+                  },
+                  "gamintribe": {
+                        "context": "GaminTribe is an online gaming platform built to bring players together around shared experiences. The company needed a complete brand identity system delivered on schedule and aligned to their platform launch timeline.",
+                        "mandate": "Managed the end-to-end delivery of GaminTribe’s brand identity project: coordinated the design team, defined milestones for visual language, logo, tone of voice, and cross-platform guidelines, and ensured final deliverables met the client’s quality standards and launch deadline."
+                  },
+                  "lono-inc": {
+                        "context": "Lono Inc. is a Tanzania-based startup studio operating at the intersection of technology and entrepreneurship within East Africa’s rapidly expanding digital economy. The engagement required navigating a complex delivery context: cross-timezone coordination, mobile-first constraints, and emerging ecosystem dynamics.",
+                        "mandate": "Scoped the advisory engagement, managed the delivery of a positioning report and digital recommendations, and coordinated research inputs across time zones. Deliverables were structured around clear milestones and aligned to the studio’s growth roadmap, with regular progress reporting to the client."
+                  },
+                  "lgs": {
+                        "context": "Lono Gaming Hub is the brand activation and events division of Lono Inc., focused on creating experiential activations and forging B2B partnerships across East Africa. Managing this mandate required coordinating a cross-functional team across multiple time zones and communication environments.",
+                        "mandate": "Full project management for event planning and execution, alongside parallel coordination of commercial partnership negotiations. Integrated project management tools with real-time stakeholder communication to maintain alignment across all workstreams, timelines, and team members."
+                  },
+                  "notion": {
+                        "context": "This project involved designing and implementing a custom automation workflow connecting directly to the Notion API, transforming the platform into a structured content database. The challenge was defining clear technical specifications and managing the build process to eliminate manual input while preserving data integrity.",
+                        "mandate": "Defined requirements, managed the development pipeline, and delivered a working automation script that programmatically creates database entries with metadata and cover images. The project demonstrated structured delivery of a technical solution within defined scope and quality standards."
+                  },
+                  "krispy-kreme": {
+                        "context": "This academic project simulated a real-world international expansion mandate, requiring coordination across team members with distinct research responsibilities. A key deliverable was translating dense analytical findings into an executive-ready report supported by data visualization.",
+                        "mandate": "Coordinated the research team, managed deliverable timelines, and ensured the final 30-page report with Power BI dashboards was delivered on schedule. Oversaw task allocation, milestone tracking, and quality control across economic, competitive, and regulatory analysis workstreams."
+                  },
+                  "northwind": {
+                        "context": "Projet Northwind is a business intelligence exercise built on a simulated operations dataset, designed to test end-to-end project delivery from raw data interpretation through to executive-ready dashboards. The challenge was structuring the work from analysis through to final presentation.",
+                        "mandate": "Managed the full delivery pipeline: KPI selection, dashboard design, and a comprehensive project report with documented rationale for every indicator. Every visual element was justified against a defined audience need and decision objective, delivered within the project’s scope and timeline."
+                  }
+            }
       },
-
-      com: {
-        title: "Junior Kabwe \u2014 Marketing Strategist",
-        heroText: "A Montr\u00e9al-based marketing strategist specializing in audience engagement, content-driven campaigns, and digital positioning for organizations navigating complex or evolving markets.",
-        secondaryTexts: [
-          "I help organizations find their voice, reach the right audiences, and turn communication into measurable outcomes. My work spans campaign strategy, digital content planning, and audience development across sectors including technology, social economy, gaming, and international markets.",
-          "I approach marketing as a strategic function, not a creative afterthought. Every campaign I design starts with the audience: who they are, what they respond to, and which channels actually move the needle. From there, I build messaging frameworks and content systems that connect, convert, and sustain engagement over time."
-        ],
-        aboutParagraphs: [
-          "What I\u2019ve built over the past several years is a sharp instinct for positioning \u2014 knowing how to frame an idea, reach the right people, and make complex messages resonate across different audiences and platforms.",
-          "Good marketing doesn\u2019t start with tactics. It starts with understanding who you\u2019re speaking to, what matters to them, and where the gap is between what exists and what could exist. That gap is where strategy lives.",
-          "That\u2019s where the best campaigns are born.",
-          "I\u2019ve led digital engagement initiatives for organizations ranging from nearly century-old institutions to early-stage startups. The common thread is always the same: audiences don\u2019t respond to noise \u2014 they respond to relevance, clarity, and consistency.",
-          "I\u2019m drawn to mandates where the communication challenge is real: legacy organizations trying to reach younger demographics, startups building awareness from zero, or sectors where the subject matter is dense and the audience needs to be met on their terms.",
-          "French is my second language and also the language in which I do most of my work. Most of my professional writing, consulting, and client communication has been conducted in French, English or Swahili.",
-          "I want to work with organizations that take their message seriously \u2014 and are ready to invest in making it land."
-        ],
-        projectOrder: ["vers-demain","playver","scion-myra","lono-inc","gamintribe","krispy-kreme","lgs","notion","northwind"],
-        videoCaptions: {
-          "vers-demain": "Vers Demain (2025) \u2014 Digital Engagement Strategy",
-          "scion-myra": "Scion Myra (2021) \u2014 Content & Campaign Operations",
-          "playver": "Playver (2026) \u2014 Pre-Launch Community Building",
-          "gamintribe": "GaminTribe (2025) \u2014 Brand Positioning",
-          "lono-inc": "Lono Inc. (2023) \u2014 Market Positioning Advisory",
-          "lgs": "LGS (2024) \u2014 Event Marketing & Partnerships",
-          "notion": "Notion \u2014 Academic (2022) \u2014 Content Automation",
-          "krispy-kreme": "Krispy Kreme \u2014 Academic (2025) \u2014 Market Research & Communication",
-          "northwind": "Northwind \u2014 Academic (2024) \u2014 Data-Driven Communication"
-        }
+      "com": {
+            "title": "Junior Kabwe — Marketing Strategist",
+            "heroText": "A Montréal-based marketing strategist specializing in audience engagement, content-driven campaigns, and digital positioning for organizations navigating complex or evolving markets.",
+            "secondaryTexts": [
+                  "I help organizations find their voice, reach the right audiences, and turn communication into measurable outcomes. My work spans campaign strategy, digital content planning, and audience development across sectors including technology, social economy, gaming, and international markets.",
+                  "I approach marketing as a strategic function, not a creative afterthought. Every campaign I design starts with the audience: who they are, what they respond to, and which channels actually move the needle. From there, I build messaging frameworks and content systems that connect, convert, and sustain engagement over time."
+            ],
+            "aboutParagraphs": [
+                  "What I’ve built over the past several years is a sharp instinct for positioning — knowing how to frame an idea, reach the right people, and make complex messages resonate across different audiences and platforms.",
+                  "Good marketing doesn’t start with tactics. It starts with understanding who you’re speaking to, what matters to them, and where the gap is between what exists and what could exist. That gap is where strategy lives.",
+                  "That’s where the best campaigns are born.",
+                  "I’ve led digital engagement initiatives for organizations ranging from nearly century-old institutions to early-stage startups. The common thread is always the same: audiences don’t respond to noise — they respond to relevance, clarity, and consistency.",
+                  "I’m drawn to mandates where the communication challenge is real: legacy organizations trying to reach younger demographics, startups building awareness from zero, or sectors where the subject matter is dense and the audience needs to be met on their terms.",
+                  "French is my second language and also the language in which I do most of my work. Most of my professional writing, consulting, and client communication has been conducted in French, English or Swahili.",
+                  "I want to work with organizations that take their message seriously — and are ready to invest in making it land."
+            ],
+            "projectOrder": [
+                  "vers-demain",
+                  "playver",
+                  "scion-myra",
+                  "lono-inc",
+                  "gamintribe",
+                  "krispy-kreme",
+                  "lgs",
+                  "notion",
+                  "northwind"
+            ],
+            "videoCaptions": {
+                  "vers-demain": "Vers Demain (2025) — Digital Engagement Strategy",
+                  "scion-myra": "Scion Myra (2021) — Content & Campaign Operations",
+                  "playver": "Playver (2026) — Pre-Launch Community Building",
+                  "gamintribe": "GaminTribe (2025) — Brand Positioning",
+                  "lono-inc": "Lono Inc. (2023) — Market Positioning Advisory",
+                  "lgs": "LGS (2024) — Event Marketing & Partnerships",
+                  "notion": "Notion — Academic (2022) — Content Automation",
+                  "krispy-kreme": "Krispy Kreme — Academic (2025) — Market Research & Communication",
+                  "northwind": "Northwind — Academic (2024) — Data-Driven Communication"
+            },
+            "projectDescriptions": {
+                  "vers-demain": {
+                        "context": "Vers Demain is a nearly century-old organization promoting a social economy rooted in social credit principles. Facing an aging membership base and declining digital engagement, the organization needed a strategic overhaul of its communication approach to reconnect with younger audiences and establish a meaningful digital presence.",
+                        "mandate": "Led a full internal communications audit, then designed a targeted digital strategy for Generation Z audiences. Deliverables included platform-specific content recommendations, audience segmentation frameworks, messaging guidelines, and a phased engagement roadmap with prioritized actions to rebuild digital relevance."
+                  },
+                  "scion-myra": {
+                        "context": "Scion Myra is where I built and refined my strategic communication practice. Founded in Montreal, the studio managed content pipelines, editorial strategies, and client-facing communication across engagements in tech, gaming, and social economy sectors.",
+                        "mandate": "Developed and executed content strategies for multiple concurrent client accounts: editorial calendar planning, brand messaging, audience targeting, and performance reporting. The studio served as a testing ground for scalable content operations, CRM-driven outreach, and repeatable communication frameworks."
+                  },
+                  "playver": {
+                        "context": "Playver is a sports tech startup connecting athletes to pickup games and venues in real time. The communication challenge was building community awareness and audience traction before the product existed, using content as the primary growth lever during the pre-launch phase.",
+                        "mandate": "Designed and executed the pre-launch content strategy: defined audience personas, built the editorial calendar, directed photography and video production, and managed distribution across digital channels. Every content piece was aligned to community growth milestones and platform positioning objectives."
+                  },
+                  "gamintribe": {
+                        "context": "GaminTribe is an online gaming platform built to bring players together around shared experiences. The company needed a cohesive brand voice and visual identity that would resonate with its core audience and differentiate it in a crowded market.",
+                        "mandate": "Directed the brand positioning process: defined tone of voice, messaging hierarchy, and cross-platform communication guidelines. Coordinated the design team to ensure visual identity and verbal identity worked as a unified system, ready for launch across all audience touchpoints."
+                  },
+                  "lono-inc": {
+                        "context": "Lono Inc. is a Tanzania-based startup studio operating within East Africa’s rapidly expanding digital economy. The engagement required understanding a mobile-first market context and crafting positioning recommendations adapted to an emerging tech ecosystem with distinct audience behaviors.",
+                        "mandate": "Delivered a strategic positioning report with digital marketing recommendations tailored to the East African tech landscape. Research inputs included competitive analysis, audience mapping, and channel strategy — all structured to help the studio communicate its value proposition clearly to local and international stakeholders."
+                  },
+                  "lgs": {
+                        "context": "Lono Gaming Hub is the brand activation and events division of Lono Inc., focused on experiential marketing and B2B partnerships across East Africa. The communication mandate required creating event marketing frameworks and partnership narratives that would resonate across cultural and business contexts.",
+                        "mandate": "Developed event marketing strategy and supported partnership communication: crafted pitch narratives, managed brand messaging for activations, and ensured consistent communication across all stakeholder touchpoints. Coordinated with the creative team to align visual and verbal messaging throughout each campaign."
+                  },
+                  "notion": {
+                        "context": "This project involved designing a custom automation workflow connecting to the Notion API, transforming the platform into a structured content database with rich metadata. The underlying objective was building a scalable content management system that could support editorial workflows.",
+                        "mandate": "Designed the content architecture and metadata framework, then built an automation pipeline that programmatically creates database entries with editorial metadata and cover images. The project demonstrated how content operations can be systematized through API integration and structured data modeling."
+                  },
+                  "krispy-kreme": {
+                        "context": "This academic project simulated a real-world international expansion mandate, requiring the team to identify the most strategically viable market for the brand’s next entry. A key communication challenge was translating dense analytical findings into accessible, executive-ready deliverables.",
+                        "mandate": "Led the communication design of the final deliverables: structured a 30-page report for executive readability, designed Power BI dashboards to make complex data legible to non-specialist audiences, and ensured the market recommendation was presented with clarity, narrative flow, and visual impact."
+                  },
+                  "northwind": {
+                        "context": "Projet Northwind is a business intelligence exercise built on a simulated operations dataset, where the core challenge was making operational complexity legible to decision-makers with limited technical context — a communication problem as much as an analytical one.",
+                        "mandate": "Designed interactive Power BI dashboards prioritizing communication clarity: every visual element was justified against a defined audience need. The final report documented indicator rationale and presentation logic, demonstrating how data visualization serves as a communication tool for operational decision-making."
+                  }
+            }
       },
-
-      dev: {
-        title: "Junior Kabwe \u2014 Business Development Specialist",
-        heroText: "A Montr\u00e9al-based business development specialist with hands-on experience in client acquisition, B2B partnerships, and market expansion across startup, technology, and international environments.",
-        secondaryTexts: [
-          "I identify opportunities, build relationships, and turn conversations into partnerships. My work spans prospecting, CRM-driven pipeline management, strategic advisory, and commercial structuring for organizations at different stages of growth \u2014 from early-stage ventures to established institutions entering new markets.",
-          "My approach to business development is grounded in understanding the client first. I map market dynamics, qualify opportunities, and structure proposals that align with both the client\u2019s needs and the organization\u2019s capacity. Growth, for me, is about building the right relationships \u2014 not just closing deals."
-        ],
-        aboutParagraphs: [
-          "Over the past several years, I\u2019ve developed a consistent practice around one core skill: turning complex environments into structured commercial opportunities. That means prospecting the right partners, understanding what they need, and building proposals that create mutual value.",
-          "Most business development efforts fail because they start with the pitch instead of the problem. The real work happens before any outreach \u2014 in understanding the market, identifying who actually makes decisions, and positioning yourself as a partner, not just a vendor.",
-          "That\u2019s where real growth begins.",
-          "I\u2019ve built and managed client pipelines across sectors including technology, gaming, social economy, and East African markets. Whether negotiating B2B partnerships, structuring advisory mandates, or managing CRM workflows, I focus on relationship quality and long-term commercial viability.",
-          "I\u2019m drawn to environments where business development means something beyond cold outreach \u2014 places where deals require nuance, market knowledge is an advantage, and trust is the real currency.",
-          "French is my second language and also the language in which I do most of my work. Most of my professional writing, consulting, and client communication has been conducted in French, English or Swahili.",
-          "I want to work with teams that see business development as a strategic function \u2014 not just a numbers game."
-        ],
-        projectOrder: ["scion-myra","lono-inc","lgs","vers-demain","playver","gamintribe","northwind","krispy-kreme","notion"],
-        videoCaptions: {
-          "vers-demain": "Vers Demain (2025) \u2014 Stakeholder Engagement Strategy",
-          "scion-myra": "Scion Myra (2021) \u2014 Client Acquisition & CRM Operations",
-          "playver": "Playver (2026) \u2014 Growth Strategy & Community Traction",
-          "gamintribe": "GaminTribe (2025) \u2014 Brand Partnership Structuring",
-          "lono-inc": "Lono Inc. (2023) \u2014 Market Expansion Advisory",
-          "lgs": "LGS (2024) \u2014 B2B Partnerships & Commercial Development",
-          "notion": "Notion \u2014 Academic (2022) \u2014 CRM & Data Pipeline Design",
-          "krispy-kreme": "Krispy Kreme \u2014 Academic (2025) \u2014 International Market Analysis",
-          "northwind": "Northwind \u2014 Academic (2024) \u2014 Operational Intelligence"
-        }
+      "dev": {
+            "title": "Junior Kabwe — Business Development Specialist",
+            "heroText": "A Montréal-based business development specialist with hands-on experience in client acquisition, B2B partnerships, and market expansion across startup, technology, and international environments.",
+            "secondaryTexts": [
+                  "I identify opportunities, build relationships, and turn conversations into partnerships. My work spans prospecting, CRM-driven pipeline management, strategic advisory, and commercial structuring for organizations at different stages of growth — from early-stage ventures to established institutions entering new markets.",
+                  "My approach to business development is grounded in understanding the client first. I map market dynamics, qualify opportunities, and structure proposals that align with both the client’s needs and the organization’s capacity. Growth, for me, is about building the right relationships — not just closing deals."
+            ],
+            "aboutParagraphs": [
+                  "Over the past several years, I’ve developed a consistent practice around one core skill: turning complex environments into structured commercial opportunities. That means prospecting the right partners, understanding what they need, and building proposals that create mutual value.",
+                  "Most business development efforts fail because they start with the pitch instead of the problem. The real work happens before any outreach — in understanding the market, identifying who actually makes decisions, and positioning yourself as a partner, not just a vendor.",
+                  "That’s where real growth begins.",
+                  "I’ve built and managed client pipelines across sectors including technology, gaming, social economy, and East African markets. Whether negotiating B2B partnerships, structuring advisory mandates, or managing CRM workflows, I focus on relationship quality and long-term commercial viability.",
+                  "I’m drawn to environments where business development means something beyond cold outreach — places where deals require nuance, market knowledge is an advantage, and trust is the real currency.",
+                  "French is my second language and also the language in which I do most of my work. Most of my professional writing, consulting, and client communication has been conducted in French, English or Swahili.",
+                  "I want to work with teams that see business development as a strategic function — not just a numbers game."
+            ],
+            "projectOrder": [
+                  "scion-myra",
+                  "lono-inc",
+                  "lgs",
+                  "vers-demain",
+                  "playver",
+                  "gamintribe",
+                  "northwind",
+                  "krispy-kreme",
+                  "notion"
+            ],
+            "videoCaptions": {
+                  "vers-demain": "Vers Demain (2025) — Stakeholder Engagement Strategy",
+                  "scion-myra": "Scion Myra (2021) — Client Acquisition & CRM Operations",
+                  "playver": "Playver (2026) — Growth Strategy & Community Traction",
+                  "gamintribe": "GaminTribe (2025) — Brand Partnership Structuring",
+                  "lono-inc": "Lono Inc. (2023) — Market Expansion Advisory",
+                  "lgs": "LGS (2024) — B2B Partnerships & Commercial Development",
+                  "notion": "Notion — Academic (2022) — CRM & Data Pipeline Design",
+                  "krispy-kreme": "Krispy Kreme — Academic (2025) — International Market Analysis",
+                  "northwind": "Northwind — Academic (2024) — Operational Intelligence"
+            },
+            "projectDescriptions": {
+                  "vers-demain": {
+                        "context": "Vers Demain is a nearly century-old organization promoting a social economy rooted in social credit principles. Facing declining engagement and an aging base, the organization needed to understand how to reach new demographics — essentially a market development challenge requiring audience research and strategic repositioning.",
+                        "mandate": "Conducted a full engagement audit, identified untapped audience segments, and delivered a strategic roadmap with platform-specific recommendations for reaching Generation Z. The work combined stakeholder consultation with market analysis to build a credible growth plan for a legacy organization entering unfamiliar territory."
+                  },
+                  "scion-myra": {
+                        "context": "Scion Myra is where I built my client acquisition and business development practice. Founded in Montreal, the studio operated across tech, gaming, and social economy sectors — requiring continuous prospecting, relationship management, and commercial structuring to sustain multiple concurrent engagements.",
+                        "mandate": "Managed the full client lifecycle: prospecting, proposal development, scope negotiation, onboarding, and ongoing relationship management. Built CRM-driven workflows for pipeline tracking and client retention, while developing repeatable processes for converting initial conversations into structured advisory mandates."
+                  },
+                  "playver": {
+                        "context": "Playver is a sports tech startup connecting athletes to pickup games and venues in real time. The pre-launch phase required building early traction and community interest — a growth challenge that depended on audience acquisition before the product was available.",
+                        "mandate": "Designed the community growth strategy for the pre-launch phase: identified target user segments, built outreach frameworks, and coordinated content production aligned to user acquisition milestones. Every initiative was measured against growth objectives tied to the platform’s launch roadmap."
+                  },
+                  "gamintribe": {
+                        "context": "GaminTribe is an online gaming platform built to bring players together. The company needed a brand identity that could support its market positioning and serve as a foundation for future partnership conversations and user acquisition efforts.",
+                        "mandate": "Directed the brand identity project with a focus on market positioning: ensured the visual and verbal identity would resonate with target users and support commercial conversations with potential partners. Deliverables were structured to serve both audience-facing and B2B communication needs."
+                  },
+                  "lono-inc": {
+                        "context": "Lono Inc. is a Tanzania-based startup studio operating at the intersection of technology and entrepreneurship within East Africa’s expanding digital economy. The engagement was fundamentally a market development mandate — helping the studio position itself for growth in an emerging and competitive ecosystem.",
+                        "mandate": "Delivered a strategic advisory engagement focused on market positioning and growth opportunity identification. Research covered competitive landscape analysis, ecosystem mapping, and digital channel strategy — all structured to inform the studio’s commercial roadmap and partnership strategy."
+                  },
+                  "lgs": {
+                        "context": "Lono Gaming Hub is the brand activation and events division of Lono Inc., focused on experiential activations and B2B partnerships across East Africa. The mandate combined event-based audience development with direct commercial partnership negotiation.",
+                        "mandate": "Led B2B partnership identification, negotiation, and closing alongside event activation planning. Managed the full commercial pipeline: prospecting potential partners, structuring proposals, and aligning partnership terms with the organization’s strategic objectives and revenue goals."
+                  },
+                  "notion": {
+                        "context": "This project involved designing a custom automation workflow connecting to the Notion API, building a structured content database. From a business development perspective, the project demonstrated the ability to design systems that scale client-facing operations and reduce manual overhead in pipeline management.",
+                        "mandate": "Built an automation pipeline that programmatically creates structured database entries with metadata and visual assets. The project showcases applied skills in CRM-adjacent system design, data modeling, and operational automation — capabilities directly transferable to sales operations and client management workflows."
+                  },
+                  "krispy-kreme": {
+                        "context": "This academic project simulated a real-world international expansion mandate: identifying the most strategically viable market for the brand’s next entry. The core challenge was evaluating market opportunities across economic, competitive, and regulatory dimensions — a classic business development research exercise.",
+                        "mandate": "Conducted multi-market analysis covering economic indicators, competitive density, regulatory barriers, and consumer opportunity. Delivered a 30-page report with a fully justified market recommendation and Power BI dashboards designed to support executive-level expansion decisions."
+                  },
+                  "northwind": {
+                        "context": "Projet Northwind is a business intelligence exercise built on simulated operations data, designed to test the ability to extract commercial insights from operational datasets — the kind of analytical foundation that informs pipeline strategy and market prioritization.",
+                        "mandate": "Designed interactive dashboards and selected KPIs oriented toward operational and commercial decision-making. The final report documented how each indicator connects to business performance, demonstrating the analytical skills that support data-driven business development."
+                  }
+            }
       },
-
-      cre: {
-        title: "Junior Kabwe \u2014 Creative Director",
-        heroText: "A Montr\u00e9al-based creative director with a practice rooted in brand storytelling, visual identity, and content production \u2014 building cohesive narratives for organizations across technology, culture, and social impact.",
-        secondaryTexts: [
-          "I lead creative projects from concept through production, shaping brand identities, visual systems, and content strategies that feel intentional and hold together across every touchpoint. My work spans branding, editorial direction, campaign design, and creative team coordination across startup, institutional, and international contexts.",
-          "My creative approach starts with the story. Before choosing a palette or a typeface, I need to understand the narrative \u2014 what the brand believes, who it speaks to, and how it should feel. From there, every decision is in service of coherence: visual, verbal, and emotional."
-        ],
-        aboutParagraphs: [
-          "What I\u2019ve built over the past several years is a creative practice grounded in intentionality. Every brand I\u2019ve shaped, every campaign I\u2019ve directed, started with the same question: what is the story here, and how does it need to be told?",
-          "Most creative work fails not because of execution, but because of vision. The palette was fine, the typography was fine, but nobody stopped to ask what the brand actually stands for. That gap between aesthetics and meaning is where most identities fall apart.",
-          "That\u2019s where strong creative direction begins.",
-          "I\u2019ve led visual identity projects, content production pipelines, and brand strategy mandates for organizations in technology, gaming, social economy, and international markets. The common thread is always narrative coherence \u2014 making sure the brand feels like one voice, across every medium.",
-          "I\u2019m drawn to projects where the creative challenge is real: brands that need to find their identity, organizations with complex stories to tell, and products that require visual systems built to scale.",
-          "French is my second language and also the language in which I do most of my work. Most of my professional writing, consulting, and creative direction has been conducted in French, English or Swahili.",
-          "I want to work with people who take their brand seriously \u2014 and understand that great creative work starts with a clear point of view."
-        ],
-        projectOrder: ["gamintribe","playver","scion-myra","vers-demain","lono-inc","lgs","notion","krispy-kreme","northwind"],
-        videoCaptions: {
-          "vers-demain": "Vers Demain (2025) \u2014 Brand Narrative & Visual Strategy",
-          "scion-myra": "Scion Myra (2021) \u2014 Studio Creative Direction",
-          "playver": "Playver (2026) \u2014 Visual Identity & Content Production",
-          "gamintribe": "GaminTribe (2025) \u2014 Full Brand Identity Design",
-          "lono-inc": "Lono Inc. (2023) \u2014 Brand Positioning & Creative Advisory",
-          "lgs": "LGS (2024) \u2014 Event Branding & Activation",
-          "notion": "Notion \u2014 Academic (2022) \u2014 Content System Design",
-          "krispy-kreme": "Krispy Kreme \u2014 Academic (2025) \u2014 Visual Data Storytelling",
-          "northwind": "Northwind \u2014 Academic (2024) \u2014 Dashboard Visual Design"
-        }
+      "cre": {
+            "title": "Junior Kabwe — Creative Director",
+            "heroText": "A Montréal-based creative director with a practice rooted in brand storytelling, visual identity, and content production — building cohesive narratives for organizations across technology, culture, and social impact.",
+            "secondaryTexts": [
+                  "I lead creative projects from concept through production, shaping brand identities, visual systems, and content strategies that feel intentional and hold together across every touchpoint. My work spans branding, editorial direction, campaign design, and creative team coordination across startup, institutional, and international contexts.",
+                  "My creative approach starts with the story. Before choosing a palette or a typeface, I need to understand the narrative — what the brand believes, who it speaks to, and how it should feel. From there, every decision is in service of coherence: visual, verbal, and emotional."
+            ],
+            "aboutParagraphs": [
+                  "What I’ve built over the past several years is a creative practice grounded in intentionality. Every brand I’ve shaped, every campaign I’ve directed, started with the same question: what is the story here, and how does it need to be told?",
+                  "Most creative work fails not because of execution, but because of vision. The palette was fine, the typography was fine, but nobody stopped to ask what the brand actually stands for. That gap between aesthetics and meaning is where most identities fall apart.",
+                  "That’s where strong creative direction begins.",
+                  "I’ve led visual identity projects, content production pipelines, and brand strategy mandates for organizations in technology, gaming, social economy, and international markets. The common thread is always narrative coherence — making sure the brand feels like one voice, across every medium.",
+                  "I’m drawn to projects where the creative challenge is real: brands that need to find their identity, organizations with complex stories to tell, and products that require visual systems built to scale.",
+                  "French is my second language and also the language in which I do most of my work. Most of my professional writing, consulting, and creative direction has been conducted in French, English or Swahili.",
+                  "I want to work with people who take their brand seriously — and understand that great creative work starts with a clear point of view."
+            ],
+            "projectOrder": [
+                  "gamintribe",
+                  "playver",
+                  "scion-myra",
+                  "vers-demain",
+                  "lono-inc",
+                  "lgs",
+                  "notion",
+                  "krispy-kreme",
+                  "northwind"
+            ],
+            "videoCaptions": {
+                  "vers-demain": "Vers Demain (2025) — Brand Narrative & Visual Strategy",
+                  "scion-myra": "Scion Myra (2021) — Studio Creative Direction",
+                  "playver": "Playver (2026) — Visual Identity & Content Production",
+                  "gamintribe": "GaminTribe (2025) — Full Brand Identity Design",
+                  "lono-inc": "Lono Inc. (2023) — Brand Positioning & Creative Advisory",
+                  "lgs": "LGS (2024) — Event Branding & Activation",
+                  "notion": "Notion — Academic (2022) — Content System Design",
+                  "krispy-kreme": "Krispy Kreme — Academic (2025) — Visual Data Storytelling",
+                  "northwind": "Northwind — Academic (2024) — Dashboard Visual Design"
+            },
+            "projectDescriptions": {
+                  "vers-demain": {
+                        "context": "Vers Demain is a nearly century-old organization promoting a social economy rooted in social credit principles. The creative challenge was significant: how do you reframe a legacy institution’s narrative to resonate with Generation Z without losing the authenticity and depth of its founding story?",
+                        "mandate": "Led the narrative repositioning: audited existing communication materials, identified the disconnect between the organization’s story and its digital expression, and designed a content strategy that honored the brand’s heritage while making it feel relevant and visually compelling for a younger audience."
+                  },
+                  "scion-myra": {
+                        "context": "Scion Myra is where I developed my creative direction practice. Founded in Montreal, the studio was both a client-facing operation and a creative laboratory — a space to define visual identities, develop editorial voices, and build cohesive brand systems across tech, gaming, and social economy sectors.",
+                        "mandate": "Creative direction across all client accounts: defined visual identities, editorial tone, and brand guidelines. Managed a design team while maintaining narrative coherence across every deliverable — from pitch decks to social content to full brand systems. The studio became the foundation for a repeatable creative process."
+                  },
+                  "playver": {
+                        "context": "Playver is a sports tech startup connecting athletes to pickup games and venues in real time. The creative mandate was to build an entire visual and narrative identity from scratch during the pre-launch phase — giving the brand a presence and a personality before the product existed.",
+                        "mandate": "Directed all creative production: defined the visual identity, art directed photography and video shoots, built the content strategy, and ensured every asset told a consistent story. The goal was to make Playver feel like an established brand from day one, with a visual language strong enough to carry the pre-launch campaign."
+                  },
+                  "gamintribe": {
+                        "context": "GaminTribe is an online gaming platform built to bring players together around shared experiences. The company needed a complete brand identity system — not just a logo, but a visual language, tone of voice, and cross-platform guidelines that could grow with the product.",
+                        "mandate": "Led the full brand identity design: from initial concept exploration through to final delivery of logo, color system, typography, visual language, tone of voice, and cross-platform usage guidelines. Coordinated the design team to ensure every element worked as part of a unified creative system."
+                  },
+                  "lono-inc": {
+                        "context": "Lono Inc. is a Tanzania-based startup studio at the intersection of technology and entrepreneurship in East Africa. The creative advisory challenge was helping the studio articulate its identity and visual positioning for a market context with its own aesthetic codes and communication norms.",
+                        "mandate": "Delivered creative advisory alongside strategic positioning: helped define the studio’s brand narrative, visual direction, and digital presence. Recommendations were adapted to the East African tech ecosystem, ensuring the brand’s creative expression felt locally grounded and internationally credible."
+                  },
+                  "lgs": {
+                        "context": "Lono Gaming Hub is the brand activation and events division of Lono Inc., focused on creating experiential activations across East Africa. The creative mandate was to design event identities and brand activation materials that could translate across both digital and physical environments.",
+                        "mandate": "Directed creative production for brand activations: designed event visual identities, coordinated marketing materials, and ensured brand consistency across all touchpoints. Worked closely with the events team to align creative output with the experiential goals of each activation."
+                  },
+                  "notion": {
+                        "context": "This project involved designing a custom automation workflow connecting to the Notion API, transforming the platform into a structured content database. From a creative systems perspective, the project addressed a fundamental challenge: how to build scalable content infrastructure that maintains editorial quality.",
+                        "mandate": "Designed the content architecture and metadata framework that drives the automation pipeline. The system programmatically creates structured entries with visual assets and editorial metadata — demonstrating how creative operations can be systematized without sacrificing quality or coherence."
+                  },
+                  "krispy-kreme": {
+                        "context": "This academic project simulated an international expansion mandate, requiring the team to translate complex market analysis into visually compelling, executive-ready deliverables. The creative challenge was making dense data feel accessible and persuasive.",
+                        "mandate": "Led the visual storytelling dimension: designed Power BI dashboards that made complex data intuitive, and structured the 30-page report for visual impact and narrative clarity. Every data visualization was treated as a communication design problem — not just an analytical output."
+                  },
+                  "northwind": {
+                        "context": "Projet Northwind is a business intelligence exercise where the core challenge was making operational complexity visually legible to decision-makers. The project tested the intersection of analytical rigor and visual communication design.",
+                        "mandate": "Designed interactive Power BI dashboards with a focus on visual hierarchy, readability, and narrative flow. Every chart, color choice, and layout decision was justified against audience needs — demonstrating how creative thinking applies to data visualization and information design."
+                  }
+            }
       },
-
-      bus: {
-        title: "Junior Kabwe \u2014 Business Intelligence Analyst",
-        heroText: "A Montr\u00e9al-based business intelligence analyst combining data visualization, performance analysis, and operational insight to support decision-making in complex organizational environments.",
-        secondaryTexts: [
-          "I turn operational data into clear, actionable intelligence. My work includes dashboard design, KPI selection, financial reporting, and data-driven recommendation frameworks \u2014 applied to contexts ranging from market expansion analysis to internal performance tracking.",
-          "My approach to BI starts with the decision it needs to support. Before building a dashboard or selecting a metric, I clarify the audience, the question, and the action that should follow. The goal is never more data \u2014 it\u2019s better decisions."
-        ],
-        aboutParagraphs: [
-          "What I\u2019ve built over the past several years is a practice centered on one principle: data only matters if it reaches the right person, in the right format, at the right time. That\u2019s the real challenge of business intelligence.",
-          "Most organizations don\u2019t lack data \u2014 they lack clarity. Dashboards get built, reports get filed, but nobody connects the numbers to a decision. The gap between insight and action is where most BI efforts stall.",
-          "That\u2019s where the real work begins.",
-          "I\u2019ve designed Power BI dashboards, built KPI frameworks, and delivered analytical reports for contexts ranging from international market analysis to operational performance reviews. In every case, the priority was the same: make the complex legible, and make the legible useful.",
-          "I\u2019m drawn to environments where the data is messy and the stakes are real \u2014 organizations where a well-built dashboard doesn\u2019t just inform, but actually shifts how people make decisions.",
-          "French is my second language and also the language in which I do most of my work. Most of my professional writing, analysis, and reporting has been conducted in French, English or Swahili.",
-          "I want to work with teams that value analytical rigor \u2014 and understand that the best intelligence is the kind people actually use."
-        ],
-        projectOrder: ["northwind","krispy-kreme","notion","vers-demain","scion-myra","lono-inc","lgs","playver","gamintribe"],
-        videoCaptions: {
-          "vers-demain": "Vers Demain (2025) \u2014 Audit & Data-Driven Strategy",
-          "scion-myra": "Scion Myra (2021) \u2014 Performance Tracking & Reporting",
-          "playver": "Playver (2026) \u2014 Growth Metrics & KPI Design",
-          "gamintribe": "GaminTribe (2025) \u2014 Brand Performance Framework",
-          "lono-inc": "Lono Inc. (2023) \u2014 Market Intelligence Advisory",
-          "lgs": "LGS (2024) \u2014 Operational Reporting & CRM Analytics",
-          "notion": "Notion \u2014 Academic (2022) \u2014 Data Pipeline & Automation",
-          "krispy-kreme": "Krispy Kreme \u2014 Academic (2025) \u2014 Market Analysis & Dashboards",
-          "northwind": "Northwind \u2014 Academic (2024) \u2014 BI Dashboard & KPI Design"
-        }
+      "bus": {
+            "title": "Junior Kabwe — Business Intelligence Analyst",
+            "heroText": "A Montréal-based business intelligence analyst combining data visualization, performance analysis, and operational insight to support decision-making in complex organizational environments.",
+            "secondaryTexts": [
+                  "I turn operational data into clear, actionable intelligence. My work includes dashboard design, KPI selection, financial reporting, and data-driven recommendation frameworks — applied to contexts ranging from market expansion analysis to internal performance tracking.",
+                  "My approach to BI starts with the decision it needs to support. Before building a dashboard or selecting a metric, I clarify the audience, the question, and the action that should follow. The goal is never more data — it’s better decisions."
+            ],
+            "aboutParagraphs": [
+                  "What I’ve built over the past several years is a practice centered on one principle: data only matters if it reaches the right person, in the right format, at the right time. That’s the real challenge of business intelligence.",
+                  "Most organizations don’t lack data — they lack clarity. Dashboards get built, reports get filed, but nobody connects the numbers to a decision. The gap between insight and action is where most BI efforts stall.",
+                  "That’s where the real work begins.",
+                  "I’ve designed Power BI dashboards, built KPI frameworks, and delivered analytical reports for contexts ranging from international market analysis to operational performance reviews. In every case, the priority was the same: make the complex legible, and make the legible useful.",
+                  "I’m drawn to environments where the data is messy and the stakes are real — organizations where a well-built dashboard doesn’t just inform, but actually shifts how people make decisions.",
+                  "French is my second language and also the language in which I do most of my work. Most of my professional writing, analysis, and reporting has been conducted in French, English or Swahili.",
+                  "I want to work with teams that value analytical rigor — and understand that the best intelligence is the kind people actually use."
+            ],
+            "projectOrder": [
+                  "northwind",
+                  "krispy-kreme",
+                  "notion",
+                  "vers-demain",
+                  "scion-myra",
+                  "lono-inc",
+                  "lgs",
+                  "playver",
+                  "gamintribe"
+            ],
+            "videoCaptions": {
+                  "vers-demain": "Vers Demain (2025) — Audit & Data-Driven Strategy",
+                  "scion-myra": "Scion Myra (2021) — Performance Tracking & Reporting",
+                  "playver": "Playver (2026) — Growth Metrics & KPI Design",
+                  "gamintribe": "GaminTribe (2025) — Brand Performance Framework",
+                  "lono-inc": "Lono Inc. (2023) — Market Intelligence Advisory",
+                  "lgs": "LGS (2024) — Operational Reporting & CRM Analytics",
+                  "notion": "Notion — Academic (2022) — Data Pipeline & Automation",
+                  "krispy-kreme": "Krispy Kreme — Academic (2025) — Market Analysis & Dashboards",
+                  "northwind": "Northwind — Academic (2024) — BI Dashboard & KPI Design"
+            },
+            "projectDescriptions": {
+                  "vers-demain": {
+                        "context": "Vers Demain is a nearly century-old organization facing declining engagement. The mandate required a data-informed approach: auditing existing channels, measuring current performance, and building a strategy grounded in audience data rather than assumptions.",
+                        "mandate": "Conducted a full internal communications audit using quantitative and qualitative data inputs. Delivered a strategic report with audience segmentation analysis, channel performance benchmarks, and a prioritized action plan built on measurable engagement indicators for Generation Z outreach."
+                  },
+                  "scion-myra": {
+                        "context": "Scion Myra operated as a full-service advisory studio managing multiple client accounts across tech, gaming, and social economy sectors. The business required consistent performance tracking, reporting, and data-driven decision-making to manage resources across concurrent engagements.",
+                        "mandate": "Built and maintained performance tracking systems across all client accounts: milestone reporting, delivery metrics, and CRM-driven analytics. The studio’s operations depended on structured data to allocate resources, prioritize accounts, and report results at an executive level."
+                  },
+                  "playver": {
+                        "context": "Playver is a sports tech startup in its pre-launch phase. The growth strategy required defining measurable KPIs for community traction and content performance before the product existed — essentially building an analytics framework for a brand with no historical data.",
+                        "mandate": "Defined growth metrics and KPI frameworks for the pre-launch phase: audience acquisition rates, content engagement benchmarks, and community growth indicators. Every content initiative was measured against defined targets, creating a data foundation for the platform’s eventual launch."
+                  },
+                  "gamintribe": {
+                        "context": "GaminTribe is an online gaming platform that needed a brand identity aligned to its market positioning. From a BI perspective, the project required understanding audience data and competitive positioning to inform identity decisions.",
+                        "mandate": "Supported the brand identity process with audience and market analysis: competitive benchmarking, audience profiling, and positioning validation. Ensured brand decisions were grounded in data about the target market rather than assumptions about what the gaming audience responds to."
+                  },
+                  "lono-inc": {
+                        "context": "Lono Inc. is a Tanzania-based startup studio operating in East Africa’s expanding digital economy. The advisory engagement required market intelligence gathering in a context where reliable data is scarce and ecosystem dynamics are rapidly evolving.",
+                        "mandate": "Delivered a market intelligence report: competitive landscape mapping, ecosystem analysis, and digital channel performance assessment. Research was structured to provide actionable indicators the studio could use to prioritize growth opportunities and measure progress against its strategic roadmap."
+                  },
+                  "lgs": {
+                        "context": "Lono Gaming Hub is the events and partnerships division of Lono Inc. The mandate required tracking operational performance across event activations and partnership pipelines — combining CRM data with event metrics to inform commercial decisions.",
+                        "mandate": "Managed operational reporting for event planning and B2B partnership development. Used Salesforce CRM and project management tools to track pipeline metrics, event performance indicators, and stakeholder engagement data across multiple concurrent workstreams."
+                  },
+                  "notion": {
+                        "context": "This project involved designing an automation workflow connecting to the Notion API, building a structured database with rich metadata. The project is a direct demonstration of data pipeline design — the same skillset applied to BI data ingestion and transformation.",
+                        "mandate": "Built a programmatic pipeline that creates structured database entries with metadata classification and visual assets. The project demonstrates core BI competencies: data modeling, automation design, API integration, and the ability to build systems that transform raw inputs into organized, queryable information."
+                  },
+                  "krispy-kreme": {
+                        "context": "This academic project simulated an international expansion mandate requiring multi-market analysis across economic, competitive, and regulatory dimensions. The core deliverable was translating complex datasets into executive-ready dashboards and a justified market recommendation.",
+                        "mandate": "Led the analytical workstream: economic indicator analysis, competitive density mapping, and regulatory risk assessment across candidate markets. Designed Power BI dashboards that made complex multi-variable comparisons accessible to non-specialist decision-makers, culminating in a data-backed expansion recommendation."
+                  },
+                  "northwind": {
+                        "context": "Projet Northwind is a business intelligence exercise built on simulated operations data, designed to test end-to-end BI capabilities: from raw data interpretation through KPI selection to executive-ready dashboard delivery.",
+                        "mandate": "Designed and delivered interactive Power BI dashboards for operational decision-making. Selected and documented KPIs with full rationale, built visual hierarchies for complex metrics, and produced a comprehensive report demonstrating how each indicator connects to specific business decisions."
+                  }
+            }
       },
-
-      adm: {
-        title: "Junior Kabwe \u2014 Administrative Coordinator",
-        heroText: "A Montr\u00e9al-based administrative coordinator with a structured approach to operational support, document management, and organizational reliability across multi-stakeholder environments.",
-        secondaryTexts: [
-          "I keep operations running smoothly. My work spans document management, scheduling coordination, process structuring, and cross-functional support for teams and clients across technology, social economy, and institutional contexts.",
-          "My approach is built on rigor, consistency, and follow-through. I believe good administration is invisible when it works \u2014 and I make sure it works. From organizing complex filing systems to coordinating across departments and external partners, I focus on the structure that lets everyone else do their best work."
-        ],
-        aboutParagraphs: [
-          "I\u2019ve spent the past several years developing a core administrative practice: building the systems, routines, and documentation that keep organizations aligned and operational. It\u2019s not glamorous work, but it\u2019s the work that holds everything else together.",
-          "Most operational breakdowns aren\u2019t caused by a lack of talent \u2014 they\u2019re caused by a lack of structure. When documents are scattered, follow-ups are missed, or processes depend on memory instead of systems, everything slows down.",
-          "That\u2019s what I\u2019m here to fix.",
-          "I\u2019ve provided administrative support across multi-client environments, managed document workflows and scheduling for distributed teams, and built operational processes from scratch for early-stage organizations. The common thread is reliability \u2014 making sure nothing falls through the cracks.",
-          "I\u2019m drawn to environments where the work is genuinely complex and the need for coordination is high: institutions with many moving parts, teams managing multiple concurrent priorities, or organizations in transition that need someone to bring structure where there isn\u2019t any yet.",
-          "French is my second language and also the language in which I do most of my work. Most of my professional writing, coordination, and client communication has been conducted in French, English or Swahili.",
-          "I want to work with teams that value precision, dependability, and the kind of operational backbone that lets good work happen consistently."
-        ],
-        projectOrder: ["scion-myra","vers-demain","lgs","lono-inc","playver","gamintribe","notion","krispy-kreme","northwind"],
-        videoCaptions: {
-          "vers-demain": "Vers Demain (2025) \u2014 Organizational Audit & Process Design",
-          "scion-myra": "Scion Myra (2021) \u2014 Multi-Client Operations & Admin Systems",
-          "playver": "Playver (2026) \u2014 Production Scheduling & Coordination",
-          "gamintribe": "GaminTribe (2025) \u2014 Deliverable Tracking & Quality Control",
-          "lono-inc": "Lono Inc. (2023) \u2014 Documentation & Advisory Support",
-          "lgs": "LGS (2024) \u2014 Event Logistics & Stakeholder Coordination",
-          "notion": "Notion \u2014 Academic (2022) \u2014 Database & Document Automation",
-          "krispy-kreme": "Krispy Kreme \u2014 Academic (2025) \u2014 Research Documentation & Reporting",
-          "northwind": "Northwind \u2014 Academic (2024) \u2014 Reporting & Data Organization"
-        }
+      "adm": {
+            "title": "Junior Kabwe — Administrative Coordinator",
+            "heroText": "A Montréal-based administrative coordinator with a structured approach to operational support, document management, and organizational reliability across multi-stakeholder environments.",
+            "secondaryTexts": [
+                  "I keep operations running smoothly. My work spans document management, scheduling coordination, process structuring, and cross-functional support for teams and clients across technology, social economy, and institutional contexts.",
+                  "My approach is built on rigor, consistency, and follow-through. I believe good administration is invisible when it works — and I make sure it works. From organizing complex filing systems to coordinating across departments and external partners, I focus on the structure that lets everyone else do their best work."
+            ],
+            "aboutParagraphs": [
+                  "I’ve spent the past several years developing a core administrative practice: building the systems, routines, and documentation that keep organizations aligned and operational. It’s not glamorous work, but it’s the work that holds everything else together.",
+                  "Most operational breakdowns aren’t caused by a lack of talent — they’re caused by a lack of structure. When documents are scattered, follow-ups are missed, or processes depend on memory instead of systems, everything slows down.",
+                  "That’s what I’m here to fix.",
+                  "I’ve provided administrative support across multi-client environments, managed document workflows and scheduling for distributed teams, and built operational processes from scratch for early-stage organizations. The common thread is reliability — making sure nothing falls through the cracks.",
+                  "I’m drawn to environments where the work is genuinely complex and the need for coordination is high: institutions with many moving parts, teams managing multiple concurrent priorities, or organizations in transition that need someone to bring structure where there isn’t any yet.",
+                  "French is my second language and also the language in which I do most of my work. Most of my professional writing, coordination, and client communication has been conducted in French, English or Swahili.",
+                  "I want to work with teams that value precision, dependability, and the kind of operational backbone that lets good work happen consistently."
+            ],
+            "projectOrder": [
+                  "scion-myra",
+                  "vers-demain",
+                  "lgs",
+                  "lono-inc",
+                  "playver",
+                  "gamintribe",
+                  "notion",
+                  "krispy-kreme",
+                  "northwind"
+            ],
+            "videoCaptions": {
+                  "vers-demain": "Vers Demain (2025) — Organizational Audit & Process Design",
+                  "scion-myra": "Scion Myra (2021) — Multi-Client Operations & Admin Systems",
+                  "playver": "Playver (2026) — Production Scheduling & Coordination",
+                  "gamintribe": "GaminTribe (2025) — Deliverable Tracking & Quality Control",
+                  "lono-inc": "Lono Inc. (2023) — Documentation & Advisory Support",
+                  "lgs": "LGS (2024) — Event Logistics & Stakeholder Coordination",
+                  "notion": "Notion — Academic (2022) — Database & Document Automation",
+                  "krispy-kreme": "Krispy Kreme — Academic (2025) — Research Documentation & Reporting",
+                  "northwind": "Northwind — Academic (2024) — Reporting & Data Organization"
+            },
+            "projectDescriptions": {
+                  "vers-demain": {
+                        "context": "Vers Demain is a nearly century-old organization facing operational and communication challenges tied to an aging membership base and fragmented internal processes. The engagement required methodical auditing, structured documentation, and organized delivery of recommendations.",
+                        "mandate": "Coordinated the full internal audit process: organized data collection across departments, managed interview scheduling with stakeholders, maintained structured documentation throughout the engagement, and ensured the final strategic report was delivered with clear formatting, prioritized action items, and proper version control."
+                  },
+                  "scion-myra": {
+                        "context": "Scion Myra operated as a multi-client advisory studio requiring rigorous administrative infrastructure to manage concurrent accounts, documents, schedules, and vendor relationships across tech, gaming, and social economy sectors.",
+                        "mandate": "Built and maintained the studio’s administrative backbone: client file management, scheduling systems, invoice tracking via QuickBooks, CRM data entry, and document workflows. Developed repeatable processes for onboarding clients, tracking deliverables, and maintaining organized records across all engagements."
+                  },
+                  "playver": {
+                        "context": "Playver is a sports tech startup in its pre-launch phase, requiring coordination of a distributed creative team under tight production timelines. The administrative challenge was keeping all assets, schedules, and deliverables organized across multiple contributors.",
+                        "mandate": "Managed production scheduling, asset tracking, and team coordination: maintained the editorial calendar, organized file systems for photography, video, and digital content, and ensured every deliverable was properly documented, versioned, and delivered according to the production timeline."
+                  },
+                  "gamintribe": {
+                        "context": "GaminTribe needed a complete brand identity delivered on schedule. The administrative dimension involved tracking design iterations, managing feedback cycles, and ensuring all final deliverables met quality standards and were properly organized for handoff.",
+                        "mandate": "Supported the brand identity delivery through structured project administration: tracked design milestones, organized revision cycles, managed client feedback documentation, and ensured the final asset package was complete, properly formatted, and delivered with usage guidelines."
+                  },
+                  "lono-inc": {
+                        "context": "Lono Inc. is a Tanzania-based startup studio. The advisory engagement required cross-timezone document management, structured research organization, and reliable administrative support to keep the engagement on track despite geographic complexity.",
+                        "mandate": "Managed document workflows for the advisory engagement: organized research inputs, maintained structured deliverable tracking, and ensured the final positioning report was properly formatted and delivered against agreed milestones. Coordinated scheduling across time zones for all stakeholder touchpoints."
+                  },
+                  "lgs": {
+                        "context": "Lono Gaming Hub required coordinating events, partnership negotiations, and team communication across multiple time zones. The administrative complexity came from managing logistics, documentation, and scheduling for simultaneous workstreams.",
+                        "mandate": "Provided full administrative support for event logistics and partnership management: scheduling coordination, meeting documentation, CRM data maintenance in Salesforce, vendor file management, and systematic follow-up tracking to ensure no commitment or deadline was missed."
+                  },
+                  "notion": {
+                        "context": "This project involved building an automation workflow to transform Notion into a structured content database — essentially creating an administrative system that eliminates manual data entry while maintaining document integrity and metadata consistency.",
+                        "mandate": "Designed and implemented an automated document management pipeline: the system creates structured database entries with proper metadata classification and visual assets, demonstrating how administrative processes can be systematized to reduce manual effort and improve data organization."
+                  },
+                  "krispy-kreme": {
+                        "context": "This academic project required coordinating a multi-person research team and organizing complex analytical deliverables into a structured, professional report. The administrative challenge was managing inputs from multiple contributors into a cohesive final product.",
+                        "mandate": "Managed research documentation, organized team inputs, and ensured the 30-page report was properly structured, formatted, and delivered on deadline. Coordinated data gathering across economic, competitive, and regulatory workstreams, maintaining consistent documentation standards throughout."
+                  },
+                  "northwind": {
+                        "context": "Projet Northwind is a business intelligence exercise requiring organized data handling, structured documentation, and methodical reporting — the same administrative rigor needed in any environment that depends on accurate records and clear deliverables.",
+                        "mandate": "Organized the full reporting pipeline: data preparation, documentation of KPI rationale, structured dashboard design, and delivery of a comprehensive project report. Every element was systematically documented, formatted, and justified for its intended audience."
+                  }
+            }
       },
-
-      coo: {
-        title: "Junior Kabwe \u2014 Coordinator",
-        heroText: "A Montr\u00e9al-based coordinator with hands-on experience in cross-functional support, operational logistics, and internal communication \u2014 keeping teams aligned and workflows moving in complex environments.",
-        secondaryTexts: [
-          "I connect the dots between people, timelines, and deliverables. My work includes cross-team coordination, internal communication, logistics planning, and operational follow-up for organizations spanning technology, social economy, events, and international markets.",
-          "My approach to coordination is about reducing friction. I make sure information flows to the right people, deadlines are visible, and nothing gets lost between departments. When coordination works well, teams stop wasting time on confusion and start spending it on the work that matters."
-        ],
-        aboutParagraphs: [
-          "Over the past several years, I\u2019ve built a practice around one essential function: making sure complex work moves forward smoothly by keeping the right people informed, the right tasks visible, and the right processes in place.",
-          "Coordination is the connective tissue of any organization. It\u2019s not about doing the work itself \u2014 it\u2019s about making sure the conditions are right for the work to happen on time, on scope, and without unnecessary friction.",
-          "That\u2019s where I operate best.",
-          "I\u2019ve coordinated across distributed teams, managed workflows spanning multiple time zones, and served as the operational link between internal departments and external partners. Whether it\u2019s tracking deliverables, aligning schedules, or flagging risks before they become blockers, I focus on what keeps operations fluid.",
-          "I\u2019m drawn to environments where coordination is genuinely challenging: organizations with multiple active workstreams, teams that depend on each other but don\u2019t always talk, and mandates where the logistics alone require full-time attention.",
-          "French is my second language and also the language in which I do most of my work. Most of my professional coordination and communication has been conducted in French, English or Swahili.",
-          "I want to work with teams that understand coordination isn\u2019t overhead \u2014 it\u2019s infrastructure."
-        ],
-        projectOrder: ["lgs","playver","vers-demain","scion-myra","gamintribe","lono-inc","krispy-kreme","notion","northwind"],
-        videoCaptions: {
-          "vers-demain": "Vers Demain (2025) \u2014 Stakeholder Coordination & Phased Delivery",
-          "scion-myra": "Scion Myra (2021) \u2014 Multi-Account Workflow Coordination",
-          "playver": "Playver (2026) \u2014 Team Coordination & Production Logistics",
-          "gamintribe": "GaminTribe (2025) \u2014 Cross-Team Brand Delivery",
-          "lono-inc": "Lono Inc. (2023) \u2014 Remote Coordination & Advisory Support",
-          "lgs": "LGS (2024) \u2014 Event Operations & Partner Coordination",
-          "notion": "Notion \u2014 Academic (2022) \u2014 Workflow Automation Design",
-          "krispy-kreme": "Krispy Kreme \u2014 Academic (2025) \u2014 Research Coordination & Reporting",
-          "northwind": "Northwind \u2014 Academic (2024) \u2014 Analytical Coordination"
-        }
+      "coo": {
+            "title": "Junior Kabwe — Coordinator",
+            "heroText": "A Montréal-based coordinator with hands-on experience in cross-functional support, operational logistics, and internal communication — keeping teams aligned and workflows moving in complex environments.",
+            "secondaryTexts": [
+                  "I connect the dots between people, timelines, and deliverables. My work includes cross-team coordination, internal communication, logistics planning, and operational follow-up for organizations spanning technology, social economy, events, and international markets.",
+                  "My approach to coordination is about reducing friction. I make sure information flows to the right people, deadlines are visible, and nothing gets lost between departments. When coordination works well, teams stop wasting time on confusion and start spending it on the work that matters."
+            ],
+            "aboutParagraphs": [
+                  "Over the past several years, I’ve built a practice around one essential function: making sure complex work moves forward smoothly by keeping the right people informed, the right tasks visible, and the right processes in place.",
+                  "Coordination is the connective tissue of any organization. It’s not about doing the work itself — it’s about making sure the conditions are right for the work to happen on time, on scope, and without unnecessary friction.",
+                  "That’s where I operate best.",
+                  "I’ve coordinated across distributed teams, managed workflows spanning multiple time zones, and served as the operational link between internal departments and external partners. Whether it’s tracking deliverables, aligning schedules, or flagging risks before they become blockers, I focus on what keeps operations fluid.",
+                  "I’m drawn to environments where coordination is genuinely challenging: organizations with multiple active workstreams, teams that depend on each other but don’t always talk, and mandates where the logistics alone require full-time attention.",
+                  "French is my second language and also the language in which I do most of my work. Most of my professional coordination and communication has been conducted in French, English or Swahili.",
+                  "I want to work with teams that understand coordination isn’t overhead — it’s infrastructure."
+            ],
+            "projectOrder": [
+                  "lgs",
+                  "playver",
+                  "vers-demain",
+                  "scion-myra",
+                  "gamintribe",
+                  "lono-inc",
+                  "krispy-kreme",
+                  "notion",
+                  "northwind"
+            ],
+            "videoCaptions": {
+                  "vers-demain": "Vers Demain (2025) — Stakeholder Coordination & Phased Delivery",
+                  "scion-myra": "Scion Myra (2021) — Multi-Account Workflow Coordination",
+                  "playver": "Playver (2026) — Team Coordination & Production Logistics",
+                  "gamintribe": "GaminTribe (2025) — Cross-Team Brand Delivery",
+                  "lono-inc": "Lono Inc. (2023) — Remote Coordination & Advisory Support",
+                  "lgs": "LGS (2024) — Event Operations & Partner Coordination",
+                  "notion": "Notion — Academic (2022) — Workflow Automation Design",
+                  "krispy-kreme": "Krispy Kreme — Academic (2025) — Research Coordination & Reporting",
+                  "northwind": "Northwind — Academic (2024) — Analytical Coordination"
+            },
+            "projectDescriptions": {
+                  "vers-demain": {
+                        "context": "Vers Demain is a nearly century-old organization needing a coordinated effort to modernize its outreach. The engagement involved multiple internal stakeholders, a phased delivery structure, and the need for someone to keep all parties aligned throughout the process.",
+                        "mandate": "Coordinated the full engagement lifecycle: scheduled stakeholder interviews, facilitated information flow between departments, tracked deliverable progress across phases, and ensured each stage of the strategic roadmap was completed before the next began. Served as the central point of contact between the organization and the consulting process."
+                  },
+                  "scion-myra": {
+                        "context": "Scion Myra operated as a multi-client advisory studio where coordination was the core operational challenge: managing concurrent accounts, aligning team members across different engagements, and keeping every client deliverable on track simultaneously.",
+                        "mandate": "Served as the coordination backbone of the studio: managed cross-account scheduling, facilitated communication between freelancers and clients, tracked editorial calendars, and ensured deliverables moved through the pipeline without bottlenecks. Built the operational processes that allowed multiple engagements to run in parallel."
+                  },
+                  "playver": {
+                        "context": "Playver is a sports tech startup with a distributed creative team working across photography, video, and digital content during a high-pressure pre-launch phase. The coordination challenge was keeping all contributors aligned under tight timelines with interdependent deliverables.",
+                        "mandate": "Coordinated the full creative team: aligned photographers, videographers, and content producers around a shared production schedule, tracked asset delivery across all workstreams, and ensured every piece of content moved from production to publication on time and in the right sequence."
+                  },
+                  "gamintribe": {
+                        "context": "GaminTribe needed a brand identity delivered through a coordinated effort between the client and the design team. Multiple feedback cycles, revision rounds, and cross-functional inputs required someone to keep the process moving and aligned.",
+                        "mandate": "Coordinated the brand identity delivery process: managed feedback cycles between the client and the design team, tracked revision milestones, aligned stakeholder input, and ensured the final deliverables reflected a coherent vision. Kept the project on schedule through structured follow-ups and clear task ownership."
+                  },
+                  "lono-inc": {
+                        "context": "Lono Inc. is a Tanzania-based startup studio. The advisory engagement required cross-timezone coordination between the consulting team and on-the-ground stakeholders in East Africa, with communication challenges that made alignment a constant operational priority.",
+                        "mandate": "Managed all coordination across time zones: scheduled meetings around availability constraints, facilitated information exchange between the consulting team and the studio’s leadership, tracked research deliverables, and ensured the final positioning report integrated inputs from all stakeholders in a structured manner."
+                  },
+                  "lgs": {
+                        "context": "Lono Gaming Hub required simultaneous coordination of event planning, B2B partnership negotiations, and a cross-functional team spanning multiple countries and time zones. The logistics alone demanded dedicated coordination infrastructure.",
+                        "mandate": "Served as the operational link between the events team, commercial partners, and internal leadership. Coordinated event logistics, managed partnership meeting schedules, tracked negotiation progress in Salesforce, and ensured all team members had the information they needed to execute their responsibilities without delays."
+                  },
+                  "notion": {
+                        "context": "This project involved building an automation workflow for the Notion API, creating a structured content database. From a coordination perspective, the project demonstrates the ability to design systems that reduce manual coordination overhead by automating repetitive operational tasks.",
+                        "mandate": "Designed and built an automated workflow that creates structured database entries with metadata and visual assets — replacing manual coordination of content inputs with a systematic pipeline. The project showcases how operational coordination can be improved through process automation and structured data management."
+                  },
+                  "krispy-kreme": {
+                        "context": "This academic project required coordinating a multi-person research team across distinct analytical workstreams — economic analysis, competitive mapping, and regulatory review — all feeding into a single cohesive deliverable under a fixed deadline.",
+                        "mandate": "Coordinated the research team: managed task allocation across workstreams, tracked individual progress against the shared timeline, facilitated integration of separate analyses into the 30-page report, and ensured the Power BI dashboards and written content were aligned and delivered together as a unified package."
+                  },
+                  "northwind": {
+                        "context": "Projet Northwind is a business intelligence exercise requiring coordination between data analysis, dashboard design, and report writing — three interdependent workstreams that needed to align into a single coherent deliverable.",
+                        "mandate": "Coordinated the analytical pipeline from data interpretation through to final presentation: ensured KPI selection, dashboard design, and report writing progressed in sync, with each element informing the others. The final deliverable demonstrated how structured coordination turns separate analytical inputs into a unified decision-support tool."
+                  }
+            }
       }
-    };
+};
 
-    // =========================================================
-    //  APPLICATION DU PROFIL AU DOM
-    // =========================================================
     var profile = profiles[ref];
     if (!profile) return;
 
     // --- 1. Titre de la page ---
     document.title = profile.title;
 
-    // --- 2. Texte hero principal ---
+    // --- 2. Texte hero ---
     var heroEl = document.querySelector(".home-hero-text");
     if (heroEl) heroEl.textContent = profile.heroText;
 
@@ -1642,7 +1968,26 @@ RESPONSIVE — MOBILE (<900px) — 50/50 vertical
       });
     }
 
-    // --- 5. Reordonner les details de projets (zone-a) ---
+    // --- 5. Descriptions de projets (Context + Mandate) ---
+    if (profile.projectDescriptions) {
+      document.querySelectorAll(".project-detail[data-project]").forEach(function(detail) {
+        var slug = detail.dataset.project;
+        var desc = profile.projectDescriptions[slug];
+        if (!desc) return;
+        var sections = detail.querySelectorAll(".project-detail-section");
+        // Section 0 = Context, Section 1 = Mandate
+        if (sections[0] && desc.context) {
+          var ctxP = sections[0].querySelector("p");
+          if (ctxP) ctxP.textContent = desc.context;
+        }
+        if (sections[1] && desc.mandate) {
+          var mandP = sections[1].querySelector("p");
+          if (mandP) mandP.textContent = desc.mandate;
+        }
+      });
+    }
+
+    // --- 6. Reordonner les details de projets (zone-a) ---
     var zoneA = document.querySelector(".portfolio-zone-a");
     if (zoneA) {
       var details = Array.prototype.slice.call(zoneA.querySelectorAll(".project-detail"));
@@ -1653,7 +1998,7 @@ RESPONSIVE — MOBILE (<900px) — 50/50 vertical
       });
     }
 
-    // --- 6. Reordonner l index lateral (zone-b) ---
+    // --- 7. Reordonner l'index lateral (zone-b) ---
     var zoneB = document.querySelector(".portfolio-zone-b");
     if (zoneB) {
       var items = Array.prototype.slice.call(zoneB.querySelectorAll(".project-index-item"));
@@ -1664,7 +2009,7 @@ RESPONSIVE — MOBILE (<900px) — 50/50 vertical
       });
     }
 
-    // --- 7. Reordonner les cartes video (panneau droit) ---
+    // --- 8. Reordonner les cartes video (panneau droit) ---
     var rightInner = document.querySelector(".right-panel-inner");
     if (rightInner) {
       var cards = Array.prototype.slice.call(rightInner.querySelectorAll(".video-card[data-project]"));
@@ -1676,7 +2021,7 @@ RESPONSIVE — MOBILE (<900px) — 50/50 vertical
       });
     }
 
-    // --- 8. Modifier les legendes video ---
+    // --- 9. Legendes video ---
     if (profile.videoCaptions) {
       document.querySelectorAll(".video-card[data-project]").forEach(function(card) {
         var slug = card.dataset.project;
@@ -1687,7 +2032,7 @@ RESPONSIVE — MOBILE (<900px) — 50/50 vertical
       });
     }
 
-    // --- 9. Mettre a jour le routeur ---
+    // --- 10. Mettre a jour le routeur ---
     if (typeof projectSlugs !== "undefined" && profile.projectOrder) {
       projectSlugs.length = 0;
       profile.projectOrder.forEach(function(s) { projectSlugs.push(s); });
